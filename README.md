@@ -3,7 +3,7 @@
 Thanos glove button for react.
 
 [![npm](https://img.shields.io/npm/v/react-thanos-glove.svg)](https://www.npmjs.com/package/react-thanos-glove)
-[![Build Status](https://api.travis-ci.org/jiggum/react-thanos-glove.svg?branch=master)](https://travis-ci.org/jiggum/react-thanos-glove)
+[![Build Status](https://api.travis-ci.com/jiggum/react-thanos-glove.svg?branch=master)](https://travis-ci.com/jiggum/react-thanos-glove)
 [![min](https://img.shields.io/bundlephobia/min/react-thanos-glove.svg)](https://www.npmjs.com/package/react-thanos-glove)
 [![minzip](https://img.shields.io/bundlephobia/minzip/react-thanos-glove.svg)](https://www.npmjs.com/package/react-thanos-glove)
 
