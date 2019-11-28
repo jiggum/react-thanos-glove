@@ -2,7 +2,7 @@
   "main": "dist/index.js",
   "name": "react-thanos-glove",
   "version": "0.0.3",
-  "description": "thanos glove button for react",
+  "description": "infinity gauntlet button for react",
   "files": [
     "dist",
     "src",
@@ -36,7 +36,9 @@
     "glove",
     "snap",
     "fingertrick",
-    "button"
+    "button",
+    "infinity",
+    "gauntlet"
   ],
   "author": "jiggum <0s.dongmin@gmail.com>",
   "license": "MIT",

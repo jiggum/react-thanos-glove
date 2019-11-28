@@ -1,6 +1,6 @@
-# react-thanos-glove
+# React Thanos Glove
 
-Thanos glove button for react.
+Infinity gauntlet button for react
 
 [![npm](https://img.shields.io/npm/v/react-thanos-glove.svg)](https://www.npmjs.com/package/react-thanos-glove)
 [![Build Status](https://api.travis-ci.com/jiggum/react-thanos-glove.svg?branch=master)](https://travis-ci.com/jiggum/react-thanos-glove)
@@ -28,8 +28,8 @@ npm install --save react-thanos-glove
 import ThanosGlove from 'react-thanos-glove'
 
 ...
-<ThanosGlove />
-<ThanosGlove size={100} type="time" mute />
+<ThanosGlove onClick={handleClick} />
+<ThanosGlove size={100} type="time" onAnimationEnd={handleAnimationEnd} mute />
 ...
 ```
 
@@ -46,3 +46,10 @@ import ThanosGlove from 'react-thanos-glove'
 
 #### mute: (optional, boolean, default: false)
 - Whether mute the action sound
+
+#### onClick: (optional, (e: MouseEvent) => void)
+- Glove onClick handler
+
+#### onAnimationEnd: (optional, (e: AnimationEvent) => void)
+> If you want to change type of the glove, use this api rather than onClick
+- Triggered when glove animation is ended
