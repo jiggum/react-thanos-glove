@@ -9,7 +9,7 @@ const c = classnames => {
     .join(' ')
 }
 
-function ThanosGlove({ size, duration, type, mute, onClick, ...props }) {
+function ThanosGlove({ size, duration, type, mute, onClick, onAnimationEnd, ...props }) {
   const [idle, setIdle] = useState(true)
   const [firstLoad, setFirstLoad] = useState(true)
   const timoutRef = useRef(undefined)
@@ -32,9 +32,6 @@ function ThanosGlove({ size, duration, type, mute, onClick, ...props }) {
       setFirstLoad(false)
       if (!mute) playAudio()
       if (onClick) onClick(e)
-      timoutRef.current = window.setTimeout(() => {
-        setIdle(true)
-      }, duration + 500)
     },
     [idle, mute, duration],
   )
@@ -44,6 +41,14 @@ function ThanosGlove({ size, duration, type, mute, onClick, ...props }) {
       if (e.keyCode === 13) handleClick(e)
     },
     [handleClick],
+  )
+
+  const handleAnimationEnd = useCallback(
+    e => {
+      setIdle(true)
+      onAnimationEnd(e)
+    },
+    [onAnimationEnd],
   )
 
   useEffect(() => {
@@ -85,6 +90,7 @@ function ThanosGlove({ size, duration, type, mute, onClick, ...props }) {
           animationDuration: `${duration}ms`,
           backgroundImage: `url('${actionImgSrc}')`,
         }}
+        onAnimationEnd={handleAnimationEnd}
       />
     </div>
   )
@@ -96,6 +102,7 @@ ThanosGlove.defaultProps = {
   type: 'snap',
   mute: false,
   onClick: null,
+  onAnimationEnd: null,
 }
 
 ThanosGlove.propTypes = {
@@ -104,6 +111,7 @@ ThanosGlove.propTypes = {
   type: PropTypes.oneOf(['snap', 'time']),
   mute: PropTypes.bool,
   onClick: PropTypes.func,
+  onAnimationEnd: PropTypes.func,
 }
 
 export default ThanosGlove

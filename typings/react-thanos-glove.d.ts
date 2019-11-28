@@ -1,10 +1,12 @@
-import React from "react";
+import React from 'react'
 
-export default function ThanosGlove(props: ThanosGloveProps): JSX.Element;
+export default function ThanosGlove(props: ThanosGloveProps): JSX.Element
 
 interface ThanosGloveProps extends React.HTMLAttributes<HTMLDivElement> {
   size?: number
   duration?: number
   type?: 'snap' | 'time'
   mute?: boolean
+  onClick: (e: MouseEvent) => void
+  onAnimationEnd?: (e: AnimationEvent) => void
 }
