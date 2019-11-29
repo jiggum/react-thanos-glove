@@ -9,7 +9,7 @@ const c = classnames => {
     .join(' ')
 }
 
-function ThanosGlove({ size, duration, type, mute, onClick, onAnimationEnd, ...props }) {
+function ThanosGlove({ className, size, duration, type, mute, onClick, onAnimationEnd, ...props }) {
   const [idle, setIdle] = useState(true)
   const [firstLoad, setFirstLoad] = useState(true)
   const timoutRef = useRef(undefined)
@@ -61,7 +61,10 @@ function ThanosGlove({ size, duration, type, mute, onClick, onAnimationEnd, ...p
 
   return (
     <div
-      className={styles.wrapper}
+      className={c({
+        [styles.wrapper]: true,
+        [className]: className,
+      })}
       style={{
         width: size,
         height: size,
@@ -97,6 +100,7 @@ function ThanosGlove({ size, duration, type, mute, onClick, onAnimationEnd, ...p
 }
 
 ThanosGlove.defaultProps = {
+  className: null,
   size: 80,
   duration: 2000,
   type: 'snap',
@@ -106,6 +110,7 @@ ThanosGlove.defaultProps = {
 }
 
 ThanosGlove.propTypes = {
+  className: PropTypes.string,
   size: PropTypes.number,
   duration: PropTypes.number,
   type: PropTypes.oneOf(['snap', 'time']),
