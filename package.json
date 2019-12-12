@@ -1,7 +1,7 @@
 {
   "main": "dist/index.js",
   "name": "react-thanos-glove",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "infinity gauntlet button for react",
   "files": [
     "dist",
@@ -66,7 +66,7 @@
     "rollup": "^1.27.5",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-postcss": "^2.0.3",
-    "rollup-plugin-uglify": "^6.0.3",
+    "rollup-plugin-uglify": "^6.0.4",
     "tslib": "^1.10.0"
   },
   "peerDependencies": {
