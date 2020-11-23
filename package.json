@@ -1,7 +1,7 @@
 {
   "main": "dist/index.js",
   "name": "react-thanos-glove",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "infinity gauntlet button for react",
   "files": [
     "dist",
