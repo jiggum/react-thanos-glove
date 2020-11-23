@@ -14,8 +14,8 @@ function ThanosGlove({ className, size, duration, type, mute, onClick, onAnimati
   const [firstLoad, setFirstLoad] = useState(true)
   const timoutRef = useRef(undefined)
   const audioRef = useRef(undefined)
-  const actionImgSrc = `http://thanos.jiggum.s3.amazonaws.com/assets/thanos-${type}.png`
-  const actionSoundSrc = `http://thanos.jiggum.s3.amazonaws.com/assets/thanos-${type}-sound.mp3`
+  const actionImgSrc = `https://s3.ap-northeast-2.amazonaws.com/thanos.jiggum/assets/thanos-${type}.png`
+  const actionSoundSrc = `https://s3.ap-northeast-2.amazonaws.com/thanos.jiggum/assets/thanos-${type}-sound.mp3`
 
   const playAudio = useCallback(() => {
     if (audioRef.current) {
@@ -80,7 +80,7 @@ function ThanosGlove({ className, size, duration, type, mute, onClick, onAnimati
           [styles.idle]: idle,
           [styles.hide]: !idle && !firstLoad,
         })}
-        src="http://thanos.jiggum.s3.amazonaws.com/assets/thanos-idle.png"
+        src="https://s3.ap-northeast-2.amazonaws.com/thanos.jiggum/assets/thanos-idle.png"
         role="presentation"
         alt=""
       />

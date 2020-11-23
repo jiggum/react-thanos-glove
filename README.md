@@ -7,8 +7,8 @@ Infinity gauntlet button for react
 [![min](https://img.shields.io/bundlephobia/min/react-thanos-glove.svg)](https://www.npmjs.com/package/react-thanos-glove)
 [![minzip](https://img.shields.io/bundlephobia/minzip/react-thanos-glove.svg)](https://www.npmjs.com/package/react-thanos-glove)
 
-[![tanos snap](http://thanos.jiggum.s3.amazonaws.com/assets/thanos-snap.gif)]()
-[![tanos time](http://thanos.jiggum.s3.amazonaws.com/assets/thanos-time.gif)]()
+[![tanos snap](https://s3.ap-northeast-2.amazonaws.com/thanos.jiggum/assets/thanos-snap.gif)]()
+[![tanos time](https://s3.ap-northeast-2.amazonaws.com/thanos.jiggum/assets/thanos-time.gif)]()
 
 ## Installation
 
